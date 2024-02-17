@@ -1,0 +1,25 @@
+<%= stylesheet_link_tag "main" %>
+
+<div class="main">
+    <p class="about">Here's your no. <%=@task.id %> task</p>
+    <p class="task-name"><%= @task.task_name %></p>
+    <div class="button-align">
+
+        <div class="buttons">
+            <%= link_to "DONE", mark_as_done_task_path(@task), method: :put, class: "primary-btn" %>
+        </div>
+        <span>|</span>
+        <div class="buttons">
+            <%= link_to "EDIT", edit_task_path(@task), class: "primary-btn" %>
+        </div>
+        <span>|</span>
+        <div class="buttons">
+            <%= link_to 'DELETE', delete_task_path(@task), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' }, class: "primary-btn" %>
+        </div>
+        <span>|</span>
+        <div class="buttons">
+            <%= link_to "RETURN", tasks_path, class: "primary-btn" %>
+        </div>
+        
+    </div>
+</div>
