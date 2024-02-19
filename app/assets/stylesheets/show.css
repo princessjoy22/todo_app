@@ -1,0 +1,66 @@
+.about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 80%;
+    height: 500px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(122, 79, 224, 0.5);
+    background-color: beige;
+}
+
+.button-align {
+    margin-bottom: 1rem;
+}
+
+.about-task {
+    background-color: rgb(252, 197, 146);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.body-task {
+    position: relative;
+    z-index: 2;
+    height: 200px;
+    font-size: 32px;
+    padding-left: 3rem;
+    overflow-y: auto;
+}
+
+.text {
+    line-height: 1.3;
+    font-family: cursive;
+    font-weight: 600;
+}
+
+.note-bg {
+    position: relative;
+    z-index: 1;
+    overflow-y: auto;
+}
+
+.note-content {
+    overflow-y: auto;
+}
+
+.outline {
+    border-bottom: 2px gray solid;
+    height: 40px;
+}
+
+.task-name {
+    font-size: 2.5rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    background-color: rgb(252, 197, 146);
+    text-transform: uppercase;
+    padding-left: 2rem;
+}
+
+
+/* 'Gill Sans',
+'Gill Sans MT',
+Calibri,
+'Trebuchet MS',
+sans-serif; */

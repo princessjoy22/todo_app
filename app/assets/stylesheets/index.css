@@ -1,0 +1,186 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    background-color: rgb(187, 221, 187);
+    height: 100vh;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 64px;
+    background-color: cornflowerblue;
+    width: 100vw;
+}
+
+.title {
+    display: flex;
+    align-items: flex-end;
+    margin-left: 6rem;
+    margin-top: 3rem;
+    width: 50%;
+}
+
+.title-name {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 78%;
+    height: 4rem;
+    padding: 0 0 1rem 1rem;
+    background-color: rgb(201, 96, 145);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    font-size: 1rem;
+}
+
+.add-btn {
+    height: 2rem;
+    width: 100px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background-color: orange;
+}
+
+.detail-btn,
+.done-btn {
+    height: 2.5rem;
+    width: 100px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: cornflowerblue;
+    font: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.done-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(32, 170, 55);
+    margin: 0;
+    padding: 0;
+
+}
+
+.bottom-btn {
+    display: flex;
+    align-items: flex-start;
+}
+
+.detail-btn {
+    margin: 0 10px 16px 32px;
+}
+
+a,
+.done {
+    text-decoration: none;
+    color: beige;
+    font-weight: 600;
+}
+
+.app-name {
+    margin: 0;
+    color: orange;
+    font-size: 1.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.title-page {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-content,
+.right-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+    height: 700px;
+}
+
+.my-tasks {
+    width: 80%;
+    height: 650px;
+    overflow-y: auto;
+    background-color: rgb(199, 228, 199);
+}
+
+.task {
+    background-color: palegoldenrod;
+    border-radius: 20px;
+    margin: 15px;
+    box-shadow: 0 0 5px rgba(214, 86, 0, 0.5);
+}
+
+.task-title,
+.details,
+.task-body {
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+    height: 5rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.task-body {
+    height: 3rem;
+    padding-left: 3rem;
+}
+
+.task-title {
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 800;
+    background-color: rgb(252, 197, 146);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    text-transform: uppercase;
+}
+
+.details {
+    height: 3rem;
+    color: beige;
+    margin-bottom: 1rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.ask-task {
+    color: palevioletred;
+    font-size: 2rem;
+    font-weight: 800;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.done {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+}

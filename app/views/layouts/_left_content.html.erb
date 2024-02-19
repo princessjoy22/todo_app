@@ -1,0 +1,28 @@
+<%= stylesheet_link_tag "index" %>
+
+<div class="left-content">
+    <div class="my-tasks">     
+        <div class="task-container" >
+                <% @tasks.each do |task| %>
+                    <div class="task">
+                        <div class="task-title">
+                            <%= task.task_name %>
+                        </div>
+                        <div class="task-body">
+                            <%= task.body %>
+                        </div>
+                        <div class="bottom-btn">
+                            <button class="detail-btn"><a href="/tasks/<%= task.id %>">See details</a></button>
+                            <% if task.completed? %>
+                                <div class="done">
+                                    <div class="done-btn">DONE</div>
+                                </div>
+                            <% end %>
+                        </div>
+                    </div>
+                <% end %>
+        </div>                  
+    </div>        
+</div>
+
+

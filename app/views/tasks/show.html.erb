@@ -1,25 +1,51 @@
-<%= stylesheet_link_tag "main" %>
+<%= stylesheet_link_tag "index" %>
+<%= stylesheet_link_tag "show" %>
+
+
 
 <div class="main">
-    <p class="about">Here's your no. <%=@task.id %> task</p>
-    <p class="task-name"><%= @task.task_name %></p>
-    <div class="button-align">
+    <%= render "layouts/navbar" %>
 
-        <div class="buttons">
-            <%= link_to "DONE", mark_as_done_task_path(@task), method: :put, class: "primary-btn" %>
+    <%= render "layouts/header" %>
+
+    <div class="container">
+        <%= render "layouts/left_content" %>
+
+        <div class="right-content">
+            <div class="notice">
+                <p class="notice" style="color:green"><%= notice %></p>  
+            </div>
+            <div class="about-container">
+            <div class="about-task">
+                <div>
+                    <p class="task-name"><%= @task.task_name %></p>  
+                </div>
+            </div>
+            
+            <div class="note-content">
+                <%= render "layouts/note_bg" %>
+            </div>
+            <div>
+                <div class="button-align">
+                    <div class="buttons">
+                        <%= link_to "DONE", mark_as_done_task_path(@task), method: :put, class: "btn" %>
+                    </div>
+                    <span>|</span>
+                    <div class="buttons">
+                        <%= link_to "EDIT", edit_task_path(@task), class: "btn" %>
+                    </div>
+                    <span>|</span>
+                    <div class="buttons">
+                        <%= link_to 'DELETE', delete_task_path(@task), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' }, class: "btn" %>
+                    </div>
+                    <span>|</span>
+                    <div class="buttons">
+                        <%= link_to "RETURN", tasks_path, class: "btn" %>
+                    </div>     
+                </div>
+                </div>
+            </div>
         </div>
-        <span>|</span>
-        <div class="buttons">
-            <%= link_to "EDIT", edit_task_path(@task), class: "primary-btn" %>
-        </div>
-        <span>|</span>
-        <div class="buttons">
-            <%= link_to 'DELETE', delete_task_path(@task), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' }, class: "primary-btn" %>
-        </div>
-        <span>|</span>
-        <div class="buttons">
-            <%= link_to "RETURN", tasks_path, class: "primary-btn" %>
-        </div>
-        
-    </div>
+    <div>   
 </div>
+

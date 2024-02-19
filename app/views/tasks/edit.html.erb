@@ -1,9 +1,21 @@
-<%= stylesheet_link_tag "main" %>
+<%= stylesheet_link_tag "index" %>
 
 <div class="main">
+    <%= render "layouts/navbar" %>
 
-    <p class="about">Would you like to change something?</p>  
+    <%= render "layouts/header" %>
 
-    <%= render "form", task: @task %>
+    <div class="container">
+        <%= render "layouts/left_content" %>
 
+        <div class="right-content">
+            <div class="add_task-form">
+                <p class="ask-task"">Would you like to change something?</p>  
+                <%= render "form", task: @task %>
+            </div>
+            <div class="notice">
+                <p class="notice" style="color:red"><%= notice %></p>  
+            </div> 
+        </div>
+    </div>
 </div>

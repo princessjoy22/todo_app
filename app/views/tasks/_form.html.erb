@@ -1,4 +1,4 @@
-<%= stylesheet_link_tag "main" %>
+<%= stylesheet_link_tag "form" %>
 
 <%= form_with model: @task do |form| %>
   <% if @task.errors.any? %>
@@ -14,16 +14,24 @@
   <% end %>
 
   <div class="input">
-    <%= form.text_field :task_name, class: "input-field", autocomplete: 'off' %>
+    <div class="about">
+      <h5>About</h5>
+      <%= form.text_field :task_name, class: "about-field", autocomplete: 'off' %>
+    </div>
+
+    <div class="description">
+      <h5>Description</h5>
+      <%= form.text_field :body, class: "description-field", autocomplete: 'off' %>
+    </div>
   </div>
 
   <div class="button-align">  
     <div class="buttons">
-      <%= form.submit 'ADD', class: "primary-btn" %>
+        <%= form.submit 'ADD', class: "new-btn" %>
     </div>
     <span>|</span>    
     <div class="buttons">
-      <%= link_to "RETURN", tasks_path, class: "primary-btn" %>
+        <%= link_to "RETURN", tasks_path, class: "btn" %>
     </div>
   </div>
 <% end %>

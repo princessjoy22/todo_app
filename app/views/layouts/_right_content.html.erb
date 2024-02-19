@@ -1,0 +1,23 @@
+<%= stylesheet_link_tag "content" %>
+
+<div class="right-content">
+    <div class="notice">
+        <p class="notice-text" style="color:green"><%= notice %></p>  
+    </div>
+
+    <div class="task_completed-container">            
+        <div class="task_completed-header">
+            <p class="daily">DAILY MILESTONES</p>
+        </div>
+
+        <div class="tasks_completed">  
+             <% @completed_tasks.each do |completed_task| %>
+                    <div class="done_task">
+                        <div class="task_title-completed">
+                            <%= completed_task.task_name %>
+                        </div>
+                    </div>
+            <% end %>
+        </div>
+    </div>
+</div>

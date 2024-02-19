@@ -1,52 +1,14 @@
-<%= stylesheet_link_tag "main" %>
+<%= stylesheet_link_tag "index" %>
+
 
 <div class="main">
-    <div class="title">
-        <p class="title-page">TO DO</p>
-    </div>
+    <%= render "layouts/navbar" %>
 
-    <div class="content">
-        <div class="today_task">       
-            <table>
-                <tr>
-                    <th>TASK</th>
-                    <th>STATUS</th>
-                </tr>
-
-                <% @tasks.each do |task| %>
-                    <tr>
-                        <td class="data">
-                            <a href="/tasks/<%= task.id %>">
-                                <%= task.task_name %>
-                            </a>
-                        </td>
-                        <td class="data">
-                            <%= task.completed ? 'DONE' : 'not yet done' %>
-                        </td>
-                    </tr>
-                <% end %>
-            </table>
-        </div>
-
-        <div class="completed_task">            
-            <table>
-                <tr>
-                    <th>Achievements for the day!!</th>
-                </tr>
-
-                <% @completed_tasks.each do |completed_task| %>
-                    <tr>
-                        <td class="data">
-                            <%= completed_task.task_name %>
-                        </td>
-                    </tr>
-                <% end %>
-            </table>
-        </div>
-    </div>
-
-    <div class="bottom">
-            <%= link_to "ADD TASK", new_task_path, class: "primary-btn" %>
-            <p class="notice" style="color:green"><%= notice %></p>
+    <%= render "layouts/header" %>
+    
+    <div class="container">      
+        <%= render "layouts/left_content" %>
+          
+        <%= render "layouts/right_content" %>                     
     </div>
 </div>
